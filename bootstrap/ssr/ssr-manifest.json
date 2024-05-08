@@ -1,0 +1,13 @@
+{
+  "\u0000/var/www/html/e-com/node_modules/vue/dist/vue.cjs.js?commonjs-exports": [],
+  "\u0000/var/www/html/e-com/node_modules/vue/dist/vue.cjs.prod.js?commonjs-exports": [],
+  "\u0000/var/www/html/e-com/node_modules/vue/index.js?commonjs-module": [],
+  "node_modules/@protonemedia/laravel-splade/dist/CompilerErrorMessages-6b34f14b.js": [
+    "/build/assets/CompilerErrorMessages-6b34f14b-CgNmLHXQ.js"
+  ],
+  "node_modules/@protonemedia/laravel-splade/dist/protone-media-laravel-splade.js": [],
+  "node_modules/vue/dist/vue.cjs.js": [],
+  "node_modules/vue/dist/vue.cjs.prod.js": [],
+  "node_modules/vue/index.js": [],
+  "resources/js/ssr.js": []
+}
