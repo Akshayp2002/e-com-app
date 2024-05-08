@@ -28,7 +28,7 @@ Route::middleware('splade')->group(function () {
     Route::spladeUploads();
 
     Route::get('/', function () {
-        return view('welcome');
+        return view('client.index');
     });
 
     Route::middleware('auth')->group(function () {
