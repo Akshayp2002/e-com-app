@@ -11,9 +11,10 @@
                     <p class="text-lg">Our latest collection of essential basics.</p>
 
                     <div class="mt-6">
-                        <a href=""
-                            class="py-2 px-5 inline-block font-semibold tracking-wide align-middle text-center bg-slate-900 dark:bg-orange-500 text-white rounded-md">Shop
-                            Now <i class="mdi mdi-arrow-right"></i></a>
+                        <Link href="{{ route('shop-grid') }}"
+                            class="py-2 px-5 inline-block font-semibold tracking-wide align-middle text-center bg-slate-900 dark:bg-orange-500 text-white rounded-md">
+                        Shop
+                        Now <i class="mdi mdi-arrow-right"></i></Link>
                     </div>
                 </div>
             </div><!--end grid-->
@@ -86,9 +87,11 @@
                             <li><a href="javascript:void(0)"
                                     class="size-10 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-center rounded-full bg-white text-slate-900 hover:bg-slate-900 hover:text-white shadow"><i
                                         data-feather="heart" class="size-4"></i></a></li>
-                            <li class="mt-1"><Link href="{{ route('product-details') }}"
-                                    class="size-10 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-center rounded-full bg-white text-slate-900 hover:bg-slate-900 hover:text-white shadow"><i
-                                        data-feather="eye" class="size-4"></i></Link></li>
+                            <li class="mt-1">
+                                <Link href="{{ route('product-details') }}"
+                                    class="size-10 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-center rounded-full bg-white text-slate-900 hover:bg-slate-900 hover:text-white shadow">
+                                <i data-feather="eye" class="size-4"></i></Link>
+                            </li>
                             <li class="mt-1"><a href="javascript:void(0)"
                                     class="size-10 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-center rounded-full bg-white text-slate-900 hover:bg-slate-900 hover:text-white shadow"><i
                                         data-feather="bookmark" class="size-4"></i></a></li>

@@ -31,6 +31,7 @@ Route::middleware('splade')->group(function () {
         return view('client.index');
     });
     Route::view('/product-details', 'client.product-detail')->name('product-details');
+    Route::view('/shop-grid', 'client.shop-grid')->name('shop-grid');
 
 
 
