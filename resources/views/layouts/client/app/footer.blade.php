@@ -10,23 +10,23 @@
                         <p class="mt-6 text-gray-300">Upgrade your style with our curated sets. Choose
                             confidence, embrace your unique look.</p>
                         <ul class="list-none mt-6">
-                            <li class="inline"><a href="https://dribbble.com/shreethemes" target="_blank"
+                            <li class="inline"><a href="" target="_blank"
                                     class="size-8 inline-flex items-center justify-center tracking-wide align-middle text-base border border-gray-800 dark:border-slate-800 rounded-md hover:text-orange-500 dark:hover:text-orange-500 text-slate-300"><i
                                         data-feather="dribbble" class="h-4 w-4 align-middle" title="dribbble"></i></a>
                             </li>
-                            <li class="inline"><a href="http://linkedin.com/company/shreethemes" target="_blank"
+                            <li class="inline"><a href="" target="_blank"
                                     class="size-8 inline-flex items-center justify-center tracking-wide align-middle text-base border border-gray-800 dark:border-slate-800 rounded-md hover:text-orange-500 dark:hover:text-orange-500 text-slate-300"><i
                                         data-feather="linkedin" class="h-4 w-4 align-middle" title="Linkedin"></i></a>
                             </li>
-                            <li class="inline"><a href="https://www.facebook.com/shreethemes" target="_blank"
+                            <li class="inline"><a href="" target="_blank"
                                     class="size-8 inline-flex items-center justify-center tracking-wide align-middle text-base border border-gray-800 dark:border-slate-800 rounded-md hover:text-orange-500 dark:hover:text-orange-500 text-slate-300"><i
                                         data-feather="facebook" class="h-4 w-4 align-middle" title="facebook"></i></a>
                             </li>
-                            <li class="inline"><a href="https://www.instagram.com/shreethemes/" target="_blank"
+                            <li class="inline"><a href="" target="_blank"
                                     class="size-8 inline-flex items-center justify-center tracking-wide align-middle text-base border border-gray-800 dark:border-slate-800 rounded-md hover:text-orange-500 dark:hover:text-orange-500 text-slate-300"><i
                                         data-feather="instagram" class="h-4 w-4 align-middle" title="instagram"></i></a>
                             </li>
-                            <li class="inline"><a href="https://twitter.com/shreethemes" target="_blank"
+                            <li class="inline"><a href="" target="_blank"
                                     class="size-8 inline-flex items-center justify-center tracking-wide align-middle text-base border border-gray-800 dark:border-slate-800 rounded-md hover:text-orange-500 dark:hover:text-orange-500 text-slate-300"><i
                                         data-feather="twitter" class="h-4 w-4 align-middle" title="twitter"></i></a>
                             </li>

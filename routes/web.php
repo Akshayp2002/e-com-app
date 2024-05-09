@@ -32,6 +32,7 @@ Route::middleware('splade')->group(function () {
     });
     Route::view('/product-details', 'client.product-detail')->name('product-details');
     Route::view('/shop-grid', 'client.shop-grid')->name('shop-grid');
+    Route::view('/checkout', 'client.checkout')->name('checkout');
     Route::view('/login', 'auth.client.login')->name('login');
     Route::view('/register', 'auth.client.register')->name('register');
     Route::view('/forgot-password', 'auth.client.forgot-password')->name('forgot-password');
