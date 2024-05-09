@@ -30,6 +30,10 @@ Route::middleware('splade')->group(function () {
     Route::get('/', function () {
         return view('client.index');
     });
+    Route::view('/product-details', 'client.product-detail')->name('product-details');
+
+
+
 
     Route::middleware('auth')->group(function () {
         Route::get('/dashboard', function () {
