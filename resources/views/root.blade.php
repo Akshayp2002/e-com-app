@@ -1,20 +1,36 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <!-- Fonts -->
-        <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
+    <title>{{ config('app.name', 'Laravel') }}</title>
 
-        <!-- Scripts -->
-        @vite(['resources/js/app.js'])
-        @spladeHead
-    </head>
-    <body class="font-sans antialiased">
-        @splade
-    </body>
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
+
+    @vite ([
+    "resources/js/app.js",
+    "resources/assets/libs/tobii/css/tobii.min.css",
+    "resources/assets/libs/mdi/font/css/materialdesignicons.min.css",
+    "resources/assets/css/tailwind.min.css",
+    "resources/assets/libs/tobii/js/tobii.min.js",
+    "resources/assets/libs/feather-icons/feather.min.js",
+    "resources/assets/js/plugins.init.js",
+    "resources/assets/js/app.js",
+    // "resources/assets/css/tailwind.min.js",
+    ])
+
+    @spladeHead
+</head>
+
+<body class="font-sans antialiased">
+    @splade
+
+<script src=" https://cdn.jsdelivr.net/npm/material-design-icons-iconfont@6.7.0/build/build.min.js "></script>
+<link href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css" rel="stylesheet">
+</body>
+
 </html>

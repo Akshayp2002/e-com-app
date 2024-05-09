@@ -16,14 +16,14 @@
         <link rel="shortcut icon" href="assets/images/favicon.ico">
 
         <!-- Css -->
-        <link href="assets/libs/tobii/css/tobii.min.css" rel="stylesheet">
+        {{-- <link href="assets/libs/tobii/css/tobii.min.css" rel="stylesheet"> --}}
         <!-- Main Css -->
-        <link href="assets/libs/@mdi/font/css/materialdesignicons.min.css" rel="stylesheet" type="text/css">
-        <link href="assets/css/tailwind.min.css" rel="stylesheet" type="text/css">
+
 
     </head>
     
-    <body class="dark:bg-slate-900">
+    {{-- <body class="dark:bg-slate-900"> --}}
+    <body>
         <!-- Loader Start -->
         <!-- <div id="preloader">
             <div id="status">
@@ -51,8 +51,8 @@
                 <!-- Logo container-->
                 <a class="logo" href="index.html">
                     <div>
-                        <img src="assets/images/logo-dark.png" class="h-[22px] inline-block dark:hidden" alt="">
-                        <img src="assets/images/logo-white.png" class="h-[22px] hidden dark:inline-block" alt="">
+                        <img src="{{asset('../resources/assets/images/logo-dark.png')}}" class="h-[22px] inline-block dark:hidden" alt="">
+                        <img src="{{asset('../resources/assets/images/logo-white.png')}}" class="h-[22px] hidden dark:inline-block" alt="">
                     </div>
                 </a>
                 <!-- End Logo container-->
@@ -96,7 +96,7 @@
                                 <li>
                                     <a href="#" class="flex items-center justify-between py-1.5 px-4">
                                         <span class="flex items-center">
-                                            <img src="assets/images/shop/trendy-shirt.jpg" class="rounded shadow dark:shadow-gray-800 w-9" alt="">
+                                            <img src="{{asset('../resources/assets/images/shop/trendy-shirt.jpg')}}" class="rounded shadow dark:shadow-gray-800 w-9" alt="">
                                             <span class="ms-3">
                                                 <span class="block font-semibold">T-shirt (M)</span>
                                                 <span class="block text-sm text-slate-400">$320 X 2</span>
@@ -110,7 +110,7 @@
                                 <li>
                                     <a href="#" class="flex items-center justify-between py-1.5 px-4">
                                         <span class="flex items-center">
-                                            <img src="assets/images/shop/luxurious-bag2.jpg" class="rounded shadow dark:shadow-gray-800 w-9" alt="">
+                                            <img src="{{asset('../resources/assets/images/shop/luxurious-bag2.jpg')}}" class="rounded shadow dark:shadow-gray-800 w-9" alt="">
                                             <span class="ms-3">
                                                 <span class="block font-semibold">Bag</span>
                                                 <span class="block text-sm text-slate-400">$50 X 5</span>
@@ -124,7 +124,7 @@
                                 <li>
                                     <a href="#" class="flex items-center justify-between py-1.5 px-4">
                                         <span class="flex items-center">
-                                            <img src="assets/images/shop/apple-smart-watch.jpg" class="rounded shadow dark:shadow-gray-800 w-9" alt="">
+                                            <img src="{{asset('../resources/assets/images/shop/apple-smart-watch.jpg')}}" class="rounded shadow dark:shadow-gray-800 w-9" alt="">
                                             <span class="ms-3">
                                                 <span class="block font-semibold">Watch (Men)</span>
                                                 <span class="block text-sm text-slate-400">$800 X 1</span>
@@ -161,7 +161,7 @@
             
                     <li class="dropdown inline-block relative ps-0.5">
                         <button data-dropdown-toggle="dropdown" class="dropdown-toggle items-center" type="button">
-                            <span class="size-9 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center rounded-full border border-orange-500 bg-orange-500 text-white"><img src="assets/images/client/16.jpg" class="rounded-full" alt=""></span>
+                            <span class="size-9 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-base text-center rounded-full border border-orange-500 bg-orange-500 text-white"><img src="{{asset('../resources/assets/images/client/16.jpg')}}" class="rounded-full" alt=""></span>
                         </button>
                         <!-- Dropdown menu -->
                         <div class="dropdown-menu absolute end-0 m-0 mt-4 z-10 w-48 rounded-md overflow-hidden bg-white dark:bg-slate-900 shadow dark:shadow-gray-700 hidden" onclick="event.stopPropagation();">
@@ -269,7 +269,7 @@
                         
                                 <li>
                                     <ul>
-                                        <li class="megamenu-head"><img src="assets/images/cta.png" alt=""></li>
+                                        <li class="megamenu-head"><img src="{{asset('../resources/assets/images/cta.png')}}" alt=""></li>
 
                                         <li class="text-center"><a href="#!" class="py-2 px-5 inline-block font-medium tracking-wide align-middle duration-500 text-base text-center bg-orange-500/10 text-orange-500 rounded-md me-2 mt-2"><i class="mdi mdi-cart-outline"></i> Shop Now</a></li>
                                     </ul>
@@ -437,27 +437,27 @@
 
                 <div class="grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 pt-6 gap-6">
                     <a href="" class="text-center hover:text-orange-500">
-                        <img src="assets/images/categories/mens-ware.jpg" class="rounded-full shadow dark:shadow-gray-800" alt="">
+                        <img src="{{asset('../resources/assets/images/categories/mens-ware.jpg')}}" class="rounded-full shadow dark:shadow-gray-800" alt="">
                         <span class="text-xl font-medium mt-3 block">Men's Wear</span>
                     </a>
 
                     <a href="" class="text-center hover:text-orange-500">
-                        <img src="assets/images/categories/ladies-ware.jpg" class="rounded-full shadow dark:shadow-gray-800" alt="">
+                        <img src="{{asset('../resources/assets/images/categories/ladies-ware.jpg')}}" class="rounded-full shadow dark:shadow-gray-800" alt="">
                         <span class="text-xl font-medium mt-3 block">Ladies Wear</span>
                     </a>
 
                     <a href="" class="text-center hover:text-orange-500">
-                        <img src="assets/images/categories/kids-ware.jpg" class="rounded-full shadow dark:shadow-gray-800" alt="">
+                        <img src="{{asset('../resources/assets/images/categories/kids-ware.jpg')}}" class="rounded-full shadow dark:shadow-gray-800" alt="">
                         <span class="text-xl font-medium mt-3 block">Kids Wear</span>
                     </a>
 
                     <a href="" class="text-center hover:text-orange-500">
-                        <img src="assets/images/categories/smart-watch.jpg" class="rounded-full shadow dark:shadow-gray-800" alt="">
+                        <img src="{{asset('../resources/assets/images/categories/smart-watch.jpg')}}" class="rounded-full shadow dark:shadow-gray-800" alt="">
                         <span class="text-xl font-medium mt-3 block">Smart Watch</span>
                     </a>
 
                     <a href="" class="text-center hover:text-orange-500">
-                        <img src="assets/images/categories/sunglasses.jpg" class="rounded-full shadow dark:shadow-gray-800" alt="">
+                        <img src="{{asset('../resources/assets/images/categories/sunglasses.jpg')}}" class="rounded-full shadow dark:shadow-gray-800" alt="">
                         <span class="text-xl font-medium mt-3 block">Sunglasses</span>
                     </a>
                 </div><!--end grid-->
@@ -472,7 +472,7 @@
                 <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 pt-6 gap-6">
                     <div class="group">
                         <div class="relative overflow-hidden shadow dark:shadow-gray-800 group-hover:shadow-lg group-hover:dark:shadow-gray-800 rounded-md duration-500">
-                            <img src="assets/images/shop/black-print-t-shirt.jpg" class="group-hover:scale-110 duration-500" alt="">
+                            <img src="{{asset('../resources/assets/images/shop/black-print-t-shirt.jpg')}}" class="group-hover:scale-110 duration-500" alt="">
     
                             <div class="absolute -bottom-20 group-hover:bottom-3 start-3 end-3 duration-500">
                                 <a href="shop-cart.html" class="py-2 px-5 inline-block font-semibold tracking-wide align-middle duration-500 text-base text-center bg-slate-900 text-white w-full rounded-md">Add to Cart</a>
@@ -506,7 +506,7 @@
 
                     <div class="group">
                         <div class="relative overflow-hidden shadow dark:shadow-gray-800 group-hover:shadow-lg group-hover:dark:shadow-gray-800 rounded-md duration-500">
-                            <img src="assets/images/shop/fashion-shoes-sneaker.jpg" class="group-hover:scale-110 duration-500" alt="">
+                            <img src="{{asset('../resources/assets/images/shop/fashion-shoes-sneaker.jpg')}}" class="group-hover:scale-110 duration-500" alt="">
     
                             <div class="absolute -bottom-20 group-hover:bottom-3 start-3 end-3 duration-500">
                                 <a href="shop-cart.html" class="py-2 px-5 inline-block font-semibold tracking-wide align-middle duration-500 text-base text-center bg-slate-900 text-white w-full rounded-md">Add to Cart</a>
@@ -540,7 +540,7 @@
 
                     <div class="group">
                         <div class="relative overflow-hidden shadow dark:shadow-gray-800 group-hover:shadow-lg group-hover:dark:shadow-gray-800 rounded-md duration-500">
-                            <img src="assets/images/shop/men-white-espadrilles-slip-shoes.jpg" class="group-hover:scale-110 duration-500" alt="">
+                            <img src="{{asset('../resources/assets/images/shop/men-white-espadrilles-slip-shoes.jpg')}}" class="group-hover:scale-110 duration-500" alt="">
     
                             <div class="absolute -bottom-20 group-hover:bottom-3 start-3 end-3 duration-500">
                                 <a href="shop-cart.html" class="py-2 px-5 inline-block font-semibold tracking-wide align-middle duration-500 text-base text-center bg-slate-900 text-white w-full rounded-md">Add to Cart</a>
@@ -570,7 +570,7 @@
 
                     <div class="group">
                         <div class="relative overflow-hidden shadow dark:shadow-gray-800 group-hover:shadow-lg group-hover:dark:shadow-gray-800 rounded-md duration-500">
-                            <img src="assets/images/shop/luxurious-bag.jpg" class="group-hover:scale-110 duration-500" alt="">
+                            <img src="{{asset('../resources/assets/images/shop/luxurious-bag.jpg')}}" class="group-hover:scale-110 duration-500" alt="">
     
                             <div class="absolute -bottom-20 group-hover:bottom-3 start-3 end-3 duration-500">
                                 <a href="shop-cart.html" class="py-2 px-5 inline-block font-semibold tracking-wide align-middle duration-500 text-base text-center bg-slate-900 text-white w-full rounded-md">Add to Cart</a>
@@ -600,7 +600,7 @@
 
                     <div class="group">
                         <div class="relative overflow-hidden shadow dark:shadow-gray-800 group-hover:shadow-lg group-hover:dark:shadow-gray-800 rounded-md duration-500">
-                            <img src="assets/images/shop/ladies-1.jpg" class="group-hover:scale-110 duration-500" alt="">
+                            <img src="{{asset('../resources/assets/images/shop/ladies-1.jpg')}}" class="group-hover:scale-110 duration-500" alt="">
     
                             <div class="absolute -bottom-20 group-hover:bottom-3 start-3 end-3 duration-500">
                                 <a href="shop-cart.html" class="py-2 px-5 inline-block font-semibold tracking-wide align-middle duration-500 text-base text-center bg-slate-900 text-white w-full rounded-md">Add to Cart</a>
@@ -630,7 +630,7 @@
 
                     <div class="group">
                         <div class="relative overflow-hidden shadow dark:shadow-gray-800 group-hover:shadow-lg group-hover:dark:shadow-gray-800 rounded-md duration-500">
-                            <img src="assets/images/shop/ladies-2.jpg" class="group-hover:scale-110 duration-500" alt="">
+                            <img src="{{asset('../resources/assets/images/shop/ladies-2.jpg')}}" class="group-hover:scale-110 duration-500" alt="">
     
                             <div class="absolute -bottom-20 group-hover:bottom-3 start-3 end-3 duration-500">
                                 <a href="shop-cart.html" class="py-2 px-5 inline-block font-semibold tracking-wide align-middle duration-500 text-base text-center bg-slate-900 text-white w-full rounded-md">Add to Cart</a>
@@ -660,7 +660,7 @@
 
                     <div class="group">
                         <div class="relative overflow-hidden shadow dark:shadow-gray-800 group-hover:shadow-lg group-hover:dark:shadow-gray-800 rounded-md duration-500">
-                            <img src="assets/images/shop/mens-jecket.jpg" class="group-hover:scale-110 duration-500" alt="">
+                            <img src="{{asset('../resources/assets/images/shop/mens-jecket.jpg')}}" class="group-hover:scale-110 duration-500" alt="">
     
                             <div class="absolute -bottom-20 group-hover:bottom-3 start-3 end-3 duration-500">
                                 <a href="shop-cart.html" class="py-2 px-5 inline-block font-semibold tracking-wide align-middle duration-500 text-base text-center bg-slate-900 text-white w-full rounded-md">Add to Cart</a>
@@ -694,7 +694,7 @@
 
                     <div class="group">
                         <div class="relative overflow-hidden shadow dark:shadow-gray-800 group-hover:shadow-lg group-hover:dark:shadow-gray-800 rounded-md duration-500">
-                            <img src="assets/images/shop/sweater-t-shirt.jpg" class="group-hover:scale-110 duration-500" alt="">
+                            <img src="{{asset('../resources/assets/images/shop/sweater-t-shirt.jpg')}}" class="group-hover:scale-110 duration-500" alt="">
     
                             <div class="absolute -bottom-20 group-hover:bottom-3 start-3 end-3 duration-500">
                                 <a href="shop-cart.html" class="py-2 px-5 inline-block font-semibold tracking-wide align-middle duration-500 text-base text-center bg-slate-900 text-white w-full rounded-md">Add to Cart</a>
@@ -724,7 +724,7 @@
 
                     <div class="group">
                         <div class="relative overflow-hidden shadow dark:shadow-gray-800 group-hover:shadow-lg group-hover:dark:shadow-gray-800 rounded-md duration-500">
-                            <img src="assets/images/shop/trendy-t-shirt2.jpg" class="group-hover:scale-110 duration-500" alt="">
+                            <img src="{{asset('../resources/assets/images/shop/trendy-t-shirt2.jpg')}}" class="group-hover:scale-110 duration-500" alt="">
     
                             <div class="absolute -bottom-20 group-hover:bottom-3 start-3 end-3 duration-500">
                                 <a href="shop-cart.html" class="py-2 px-5 inline-block font-semibold tracking-wide align-middle duration-500 text-base text-center bg-slate-900 text-white w-full rounded-md">Add to Cart</a>
@@ -754,7 +754,7 @@
 
                     <div class="group">
                         <div class="relative overflow-hidden shadow dark:shadow-gray-800 group-hover:shadow-lg group-hover:dark:shadow-gray-800 rounded-md duration-500">
-                            <img src="assets/images/shop/men-sun-glasses.jpg" class="group-hover:scale-110 duration-500" alt="">
+                            <img src="{{asset('../resources/assets/images/shop/men-sun-glasses.jpg')}}" class="group-hover:scale-110 duration-500" alt="">
     
                             <div class="absolute -bottom-20 group-hover:bottom-3 start-3 end-3 duration-500">
                                 <a href="shop-cart.html" class="py-2 px-5 inline-block font-semibold tracking-wide align-middle duration-500 text-base text-center bg-slate-900 text-white w-full rounded-md">Add to Cart</a>
@@ -788,7 +788,7 @@
 
                     <div class="group">
                         <div class="relative overflow-hidden shadow dark:shadow-gray-800 group-hover:shadow-lg group-hover:dark:shadow-gray-800 rounded-md duration-500">
-                            <img src="assets/images/shop/women-s-white-low-heel-shoes.jpg" class="group-hover:scale-110 duration-500" alt="">
+                            <img src="{{asset('../resources/assets/images/shop/women-s-white-low-heel-shoes.jpg')}}" class="group-hover:scale-110 duration-500" alt="">
     
                             <div class="absolute -bottom-20 group-hover:bottom-3 start-3 end-3 duration-500">
                                 <a href="shop-cart.html" class="py-2 px-5 inline-block font-semibold tracking-wide align-middle duration-500 text-base text-center bg-slate-900 text-white w-full rounded-md">Add to Cart</a>
@@ -822,7 +822,7 @@
 
                     <div class="group">
                         <div class="relative overflow-hidden shadow dark:shadow-gray-800 group-hover:shadow-lg group-hover:dark:shadow-gray-800 rounded-md duration-500">
-                            <img src="assets/images/shop/casual-men-shorts.jpg" class="group-hover:scale-110 duration-500" alt="">
+                            <img src="{{asset('../resources/assets/images/shop/casual-men-shorts.jpg')}}" class="group-hover:scale-110 duration-500" alt="">
     
                             <div class="absolute -bottom-20 group-hover:bottom-3 start-3 end-3 duration-500">
                                 <a href="shop-cart.html" class="py-2 px-5 inline-block font-semibold tracking-wide align-middle duration-500 text-base text-center bg-slate-900 text-white w-full rounded-md">Add to Cart</a>
@@ -894,7 +894,7 @@
                 <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 pt-6 gap-6">
                     <div class="group">
                         <div class="relative overflow-hidden shadow dark:shadow-gray-800 group-hover:shadow-lg group-hover:dark:shadow-gray-800 rounded-md duration-500">
-                            <img src="assets/images/shop/luxurious-bag2.jpg" class="group-hover:scale-110 duration-500" alt="">
+                            <img src="{{asset('../resources/assets/images/shop/luxurious-bag2.jpg')}}" class="group-hover:scale-110 duration-500" alt="">
     
                             <div class="absolute -bottom-20 group-hover:bottom-3 start-3 end-3 duration-500">
                                 <a href="shop-cart.html" class="py-2 px-5 inline-block font-semibold tracking-wide align-middle duration-500 text-base text-center bg-slate-900 text-white w-full rounded-md">Add to Cart</a>
@@ -928,7 +928,7 @@
 
                     <div class="group">
                         <div class="relative overflow-hidden shadow dark:shadow-gray-800 group-hover:shadow-lg group-hover:dark:shadow-gray-800 rounded-md duration-500">
-                            <img src="assets/images/shop/smart-watch.jpg" class="group-hover:scale-110 duration-500" alt="">
+                            <img src="{{asset('../resources/assets/images/shop/smart-watch.jpg')}}" class="group-hover:scale-110 duration-500" alt="">
     
                             <div class="absolute -bottom-20 group-hover:bottom-3 start-3 end-3 duration-500">
                                 <a href="shop-cart.html" class="py-2 px-5 inline-block font-semibold tracking-wide align-middle duration-500 text-base text-center bg-slate-900 text-white w-full rounded-md">Add to Cart</a>
@@ -958,7 +958,7 @@
 
                     <div class="group">
                         <div class="relative overflow-hidden shadow dark:shadow-gray-800 group-hover:shadow-lg group-hover:dark:shadow-gray-800 rounded-md duration-500">
-                            <img src="assets/images/shop/white-sandals-summer-footwear.jpg" class="group-hover:scale-110 duration-500" alt="">
+                            <img src="{{asset('../resources/assets/images/shop/white-sandals-summer-footwear.jpg')}}" class="group-hover:scale-110 duration-500" alt="">
     
                             <div class="absolute -bottom-20 group-hover:bottom-3 start-3 end-3 duration-500">
                                 <a href="shop-cart.html" class="py-2 px-5 inline-block font-semibold tracking-wide align-middle duration-500 text-base text-center bg-slate-900 text-white w-full rounded-md">Add to Cart</a>
@@ -988,7 +988,7 @@
 
                     <div class="group">
                         <div class="relative overflow-hidden shadow dark:shadow-gray-800 group-hover:shadow-lg group-hover:dark:shadow-gray-800 rounded-md duration-500">
-                            <img src="assets/images/shop/ladies-skirt-pair.jpg" class="group-hover:scale-110 duration-500" alt="">
+                            <img src="{{asset('../resources/assets/images/shop/ladies-skirt-pair.jpg')}}" class="group-hover:scale-110 duration-500" alt="">
     
                             <div class="absolute -bottom-20 group-hover:bottom-3 start-3 end-3 duration-500">
                                 <a href="shop-cart.html" class="py-2 px-5 inline-block font-semibold tracking-wide align-middle duration-500 text-base text-center bg-slate-900 text-white w-full rounded-md">Add to Cart</a>
@@ -1035,7 +1035,7 @@
                             <div class="grid md:grid-cols-12 grid-cols-1 gap-6">
                                 <div class="lg:col-span-3 md:col-span-12">
                                     <a href="#" class="text-[22px] focus:outline-none">
-                                        <img src="assets/images/logo-light.png" alt="">
+                                        <img src="{{asset('../resources/assets/images/logo-light.png')}}" alt="">
                                     </a>
                                     <p class="mt-6 text-gray-300">Upgrade your style with our curated sets. Choose confidence, embrace your unique look.</p>
                                     <ul class="list-none mt-6">
@@ -1140,15 +1140,15 @@
                 <div class="container relative text-center">
                     <div class="grid md:grid-cols-2 items-center">
                         <div class="md:text-start text-center">
-                            <p class="mb-0">© <script>document.write(new Date().getFullYear())</script> Cartzio. Design with <i class="mdi mdi-heart text-red-600"></i> by <a href="https://shreethemes.in/" target="_blank" class="text-reset">Shreethemes</a>.</p>
+                            {{-- <p class="mb-0">© <script>document.write(new Date().getFullYear())</script> Cartzio. Design with <i class="mdi mdi-heart text-red-600"></i> by <a href="https://shreethemes.in/" target="_blank" class="text-reset">Shreethemes</a>.</p> --}}
                         </div>
 
                         <ul class="list-none md:text-end text-center mt-6 md:mt-0">
-                            <li class="inline"><a href=""><img src="assets/images/payments/american-express.jpg" class="max-h-6 rounded inline" title="American Express" alt=""></a></li>
-                            <li class="inline"><a href=""><img src="assets/images/payments/discover.jpg" class="max-h-6 rounded inline" title="Discover" alt=""></a></li>
-                            <li class="inline"><a href=""><img src="assets/images/payments/mastercard.jpg" class="max-h-6 rounded inline" title="Master Card" alt=""></a></li>
-                            <li class="inline"><a href=""><img src="assets/images/payments/paypal.jpg" class="max-h-6 rounded inline" title="Paypal" alt=""></a></li>
-                            <li class="inline"><a href=""><img src="assets/images/payments/visa.jpg" class="max-h-6 rounded inline" title="Visa" alt=""></a></li>
+                            <li class="inline"><a href=""><img src="{{asset('../resources/assets/images/payments/american-express.jpg')}}" class="max-h-6 rounded inline" title="American Express" alt=""></a></li>
+                            <li class="inline"><a href=""><img src="{{asset('../resources/assets/images/payments/discover.jpg')}}" class="max-h-6 rounded inline" title="Discover" alt=""></a></li>
+                            <li class="inline"><a href=""><img src="{{asset('../resources/assets/images/payments/mastercard.jpg')}}" class="max-h-6 rounded inline" title="Master Card" alt=""></a></li>
+                            <li class="inline"><a href=""><img src="{{asset('../resources/assets/images/payments/paypal.jpg')}}" class="max-h-6 rounded inline" title="Paypal" alt=""></a></li>
+                            <li class="inline"><a href=""><img src="{{asset('../resources/assets/images/payments/visa.jpg')}}" class="max-h-6 rounded inline" title="Visa" alt=""></a></li>
                         </ul>
                     </div><!--end grid-->
                 </div><!--end container-->
@@ -1181,10 +1181,10 @@
         <!-- Back to top -->
 
         <!-- JAVASCRIPTS -->
-        <script src="{{asset('assets/libs/tobii/js/tobii.min.js')}}"></script>
-        <script src="assets/libs/feather-icons/feather.min.js"></script>
-        <script src="assets/js/plugins.init.js"></script>
-        <script src="assets/js/app.js"></script>
+        {{-- <script src="{{asset('../resources/{{asset('assets/libs/tobii/js/tobii.min.js')}}"></script>
+        <script src="{{asset('../resources/assets/libs/feather-icons/feather.min.js"></script>
+        <script src="{{asset('../resources/assets/js/plugins.init.js"></script>
+        <script src="{{asset('../resources/assets/js/app.js"></script> --}}
         <!-- JAVASCRIPTS -->
     </body>
 </html>
