@@ -1,13 +1,13 @@
 <div class="container relative">
     <!-- Logo container-->
-    <a class="logo" href="{{url('/')}}">
-        <div>
-            <img src="{{ asset('../resources/assets/images/logo-dark.png') }}" class="h-[22px] inline-block dark:hidden"
-                alt="">
-            <img src="{{ asset('../resources/assets/images/logo-white.png') }}" class="h-[22px] hidden dark:inline-block"
-                alt="">
-        </div>
-    </a>
+    <Link class="logo" href="{{ url('/') }}">
+    <div>
+        <img src="{{ asset('../resources/assets/images/logo-dark.png') }}" class="h-[22px] inline-block dark:hidden"
+            alt="">
+        <img src="{{ asset('../resources/assets/images/logo-white.png') }}" class="h-[22px] hidden dark:inline-block"
+            alt="">
+    </div>
+    </Link>
     <!-- End Logo container-->
 
     <!-- Start Mobile Toggle -->

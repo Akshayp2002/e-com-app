@@ -1,4 +1,4 @@
-@extends('layouts.client.app')
+@extends('layouts.client.app.layout')
 @section('client')
     <!-- Start Hero -->
     <section

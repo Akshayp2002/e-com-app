@@ -1,4 +1,4 @@
-@extends('layouts.client.app')
+@extends('layouts.client.app.layout')
 @section('client')
     <!-- Start Hero -->
     <section class="relative table w-full py-20 lg:py-24 md:pt-28 bg-gray-50 dark:bg-slate-800">

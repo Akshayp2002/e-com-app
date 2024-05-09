@@ -1,34 +1,14 @@
-<!DOCTYPE html>
-<html lang="en" class="light scroll-smooth" dir="ltr">
-
-<head>
-    <meta charset="UTF-8">
-    <title>Cartzio - Fashion Store eCommerce Tailwind CSS Landing Template</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta content="Fashion Store eCommerce Tailwind CSS Landing Template" name="description">
-    <meta content="Shop, Fashion, eCommerce, Cart, Shop Cart, tailwind css, Admin, Landing" name="keywords">
-    <meta name="author" content="Shreethemes">
-    <meta name="website" content="https://shreethemes.in">
-    <meta name="email" content="support@shreethemes.in">
-    <meta name="version" content="1.0.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <!-- favicon -->
-    <link rel="shortcut icon" href="{{ asset('assets/images/favicon.ico') }}">
-</head>
-
-{{-- <body class="dark:bg-slate-900"> --}}
-
-<body>
+@extends('layouts.client.root')
+@section('app')
     <!-- Loader Start -->
     <!-- <div id="preloader">
-            <div id="status">
-                <div class="spinner">
-                    <div class="double-bounce1"></div>
-                    <div class="double-bounce2"></div>
-                </div>
-            </div>
-        </div> -->
+                            <div id="status">
+                                <div class="spinner">
+                                    <div class="double-bounce1"></div>
+                                    <div class="double-bounce2"></div>
+                                </div>
+                            </div>
+                        </div> -->
     <!-- Loader End -->
     <!-- TAGLINE START-->
     <div class="tagline bg-slate-900">
@@ -46,7 +26,7 @@
     <!-- Start Navbar -->
     <nav id="topnav" class="defaultscroll is-sticky tagline-height">
 
-        @include('layouts.client.header')
+        @include('layouts.client.app.header')
 
     </nav>
     <!-- End Navbar -->
@@ -57,7 +37,7 @@
 
     <footer class="footer bg-dark-footer relative text-gray-200 dark:text-gray-200">
 
-        @include('layouts.client.footer')
+        @include('layouts.client.app.footer')
 
     </footer>
 
@@ -93,6 +73,4 @@
         class="back-to-top fixed hidden text-lg rounded-full z-10 bottom-5 end-5 size-9 text-center bg-orange-500 text-white justify-center items-center"><i
             class="mdi mdi-arrow-up"></i></a>
     <!-- Back to top -->
-</body>
-
-</html>
+@endsection
