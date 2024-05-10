@@ -1,12 +1,3 @@
-/* Template Name: Cartzio - Fashion Store eCommerce Tailwind CSS Landing Template
-   Author: Shreethemes
-   Email: support@shreethemes.in
-   Website: https://shreethemes.in
-   Version: 1.0.0
-   Created: March 2023
-   File Description: Main JS file of the template
-*/
-
 
 /*********************************/
 /*         INDEX                 */

@@ -7,11 +7,9 @@ export default defineConfig({
         laravel({
             input:[
                 "resources/js/app.js",
-                "resources/assets/libs/tobii/css/tobii.min.css",
-                "resources/assets/libs/mdi/font/css/materialdesignicons.min.css",
+                // "resources/assets/libs/tobii/css/tobii.min.css",
                 "resources/assets/css/tailwind.min.css",
-                "resources/assets/libs/tobii/js/tobii.min.js",
-                "resources/assets/libs/feather-icons/feather.min.js",
+                // "resources/assets/libs/tobii/js/tobii.min.js",
                 "resources/assets/js/plugins.init.js",
                 "resources/assets/js/app.js",
             ],
