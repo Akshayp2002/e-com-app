@@ -2,13 +2,13 @@
 @section('app')
     <!-- Loader Start -->
     <!-- <div id="preloader">
-                            <div id="status">
-                                <div class="spinner">
-                                    <div class="double-bounce1"></div>
-                                    <div class="double-bounce2"></div>
-                                </div>
-                            </div>
-                        </div> -->
+            <div id="status">
+                <div class="spinner">
+                    <div class="double-bounce1"></div>
+                    <div class="double-bounce2"></div>
+                </div>
+            </div>
+        </div> -->
     <!-- Loader End -->
     <!-- TAGLINE START-->
     <div class="tagline bg-slate-900">
