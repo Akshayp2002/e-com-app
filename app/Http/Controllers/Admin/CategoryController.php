@@ -43,15 +43,6 @@ class CategoryController extends Controller
         return redirect()->route('categories.index')
             ->with('success', 'Category created successfully.');
     }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
     /**
      * Show the form for editing the specified resource.
      */

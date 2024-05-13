@@ -67,7 +67,7 @@
         </li>
 
         <li class="hover:bg-gray-100">
-            <a href="{{ route('app-settings.index') }}"
+            <a href="{{ route('app-settings.create') }}"
                 class="h-16 px-6 flex flex justify-center items-center w-full
 					focus:text-orange-500"
                 title="App Settings">
