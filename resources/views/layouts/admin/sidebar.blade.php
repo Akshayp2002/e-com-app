@@ -1,8 +1,6 @@
 <!-- container -->
-
 <aside class="flex flex-col items-center bg-white text-gray-700 shadow h-screen">
     <!-- Side Nav Bar-->
-
     <div class="h-16 flex items-center w-full">
         <!-- Logo Section -->
         <Link class="h-6 w-6 mx-auto" href="{{ route('dashboard') }}">
@@ -11,11 +9,11 @@
             alt="svelte logo" />
         </Link>
     </div>
-
     <ul>
         <!-- Items Section -->
         <li class="hover:bg-gray-100">
-            <a href="." class="h-16 px-6 flex flex justify-center items-center w-full
+            <a href="{{ route('bg-content.index') }}"
+                class="h-16 px-6 flex flex justify-center items-center w-full
 					focus:text-orange-500">
                 <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -25,7 +23,6 @@
                             2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0
                             0-1.79 1.11z"></path>
                 </svg>
-
             </a>
         </li>
 
@@ -37,7 +34,6 @@
                     stroke-linejoin="round">
                     <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
                 </svg>
-
             </a>
         </li>
 
@@ -52,7 +48,6 @@
                     <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2
                             0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
                 </svg>
-
             </a>
         </li>
 
@@ -67,12 +62,12 @@
                     <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0
                             2-1.61L23 6H6"></path>
                 </svg>
-
             </a>
         </li>
 
         <li class="hover:bg-gray-100">
-            <a href="." class="h-16 px-6 flex flex justify-center items-center w-full
+            <a href="{{ route('app-settings.index') }}"
+                class="h-16 px-6 flex flex justify-center items-center w-full
 					focus:text-orange-500">
                 <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -108,23 +103,24 @@
                 </svg>
             </a>
         </li>
-
     </ul>
 
-    <div class="mt-auto h-16 flex items-center w-full">
+    <div class="mt-auto h-16 flex justify-center items-center w-full">
         <!-- Action Section -->
-        <button
-            class="h-16 w-10 mx-auto flex flex justify-center items-center
+        <form method="POST" action="{{ route('logout') }}">
+            @csrf
+            <button
+                class="h-16 w-10 mx-auto flex flex justify-center items-center
 				w-full focus:text-orange-500 hover:bg-red-200 focus:outline-none">
-            <svg class="h-5 w-5 text-red-700" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round">
-                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
-                <polyline points="16 17 21 12 16 7"></polyline>
-                <line x1="21" y1="12" x2="9" y2="12"></line>
-            </svg>
-
-        </button>
+                <svg class="h-5 w-5 text-red-700" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                    <polyline points="16 17 21 12 16 7"></polyline>
+                    <line x1="21" y1="12" x2="9" y2="12"></line>
+                </svg>
+            </button>
+        </form>
     </div>
 
 </aside>

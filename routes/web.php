@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Admin\AppSettingsController;
+use App\Http\Controllers\Admin\BgContentController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -36,8 +38,13 @@ Route::middleware('splade')->group(function () {
     Route::view('/login', 'auth.client.login')->name('login');
     Route::view('/register', 'auth.client.register')->name('register');
     Route::view('/forgot-password', 'auth.client.forgot-password')->name('forgot-password');
+    Route::view('/app-settings', 'admin.appSettings.form')->name('app-settings');
+    Route::view('/bg-content', 'admin.bgContent.form')->name('bg-content');
 
-
+    Route::resources([
+        'app-settings' => AppSettingsController::class,
+        'bg-content'   => BgContentController::class,
+    ]);
 
 
     Route::middleware('auth')->group(function () {
