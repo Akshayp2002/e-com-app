@@ -14,7 +14,8 @@
         <li class="hover:bg-gray-100">
             <a href="{{ route('bg-content.index') }}"
                 class="h-16 px-6 flex flex justify-center items-center w-full
-					focus:text-orange-500">
+					focus:text-orange-500"
+                title="BG Content">
                 <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                     stroke-linejoin="round">
@@ -27,8 +28,8 @@
         </li>
 
         <li class="hover:bg-gray-100">
-            <a href="." class="h-16 px-6 flex flex justify-center items-center w-full
-					focus:text-orange-500">
+            <a href="{{ route('collection.index') }}" class="h-16 px-6 flex flex justify-center items-center w-full
+					focus:text-orange-500" title="Collections">
                 <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                     stroke-linejoin="round">
@@ -38,7 +39,7 @@
         </li>
 
         <li class="hover:bg-gray-100">
-            <a href="." class="h-16 px-6 flex flex justify-center items-center w-full
+            <a href="{{ route('categories.index')}}" class="h-16 px-6 flex flex justify-center items-center w-full
 					focus:text-orange-500">
 
                 <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -68,7 +69,8 @@
         <li class="hover:bg-gray-100">
             <a href="{{ route('app-settings.index') }}"
                 class="h-16 px-6 flex flex justify-center items-center w-full
-					focus:text-orange-500">
+					focus:text-orange-500"
+                title="App Settings">
                 <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                     stroke-linejoin="round">
@@ -105,13 +107,13 @@
         </li>
     </ul>
 
-    <div class="mt-auto h-16 flex justify-center items-center w-full">
+    <div class="mt-auto h-16 flex justify-center items-center w-full hover:bg-red-200" title="Logout">
         <!-- Action Section -->
         <form method="POST" action="{{ route('logout') }}">
             @csrf
             <button
                 class="h-16 w-10 mx-auto flex flex justify-center items-center
-				w-full focus:text-orange-500 hover:bg-red-200 focus:outline-none">
+				w-full focus:text-orange-500  focus:outline-none">
                 <svg class="h-5 w-5 text-red-700" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                     stroke-linecap="round" stroke-linejoin="round">

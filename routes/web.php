@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\Admin\AppSettingsController;
 use App\Http\Controllers\Admin\BgContentController;
+use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\CollectionController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -44,6 +46,8 @@ Route::middleware('splade')->group(function () {
     Route::resources([
         'app-settings' => AppSettingsController::class,
         'bg-content'   => BgContentController::class,
+        'collection'   => CollectionController::class,
+        'categories'   => CategoryController::class,
     ]);
 
 
