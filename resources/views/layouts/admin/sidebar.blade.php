@@ -12,44 +12,44 @@
     <ul>
         <!-- Items Section -->
         <li class="hover:bg-gray-100">
-            <a href="{{ route('bg-content.index') }}"
+            <Link href="{{ route('bg-content.create') }}"
                 class="h-16 px-6 flex flex justify-center items-center w-full
 					focus:text-orange-500"
                 title="BG Content">
-                <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round">
-                    <polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline>
-                    <path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0
+            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline>
+                <path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0
                             2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0
                             0-1.79 1.11z"></path>
-                </svg>
-            </a>
+            </svg>
+            </Link>
         </li>
 
         <li class="hover:bg-gray-100">
-            <a href="{{ route('collection.index') }}" class="h-16 px-6 flex flex justify-center items-center w-full
-					focus:text-orange-500" title="Collections">
-                <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round">
-                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
-                </svg>
-            </a>
+            <Link href=""
+                class="h-16 px-6 flex flex justify-center items-center w-full
+					focus:text-orange-500"
+                title="Collections">
+            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+            </svg>
+            </Link>
         </li>
 
         <li class="hover:bg-gray-100">
-            <a href="{{ route('categories.index')}}" class="h-16 px-6 flex flex justify-center items-center w-full
-					focus:text-orange-500">
-
-                <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round">
-                    <polyline points="3 6 5 6 21 6"></polyline>
-                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2
+            <Link href="{{ route('categories.index') }}"
+                class="h-16 px-6 flex flex justify-center items-center w-full
+					focus:text-orange-500"
+                title="Category">
+            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="3 6 5 6 21 6"></polyline>
+                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2
                             0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
-                </svg>
-            </a>
+            </svg>
+            </Link>
         </li>
 
         <li class="hover:bg-gray-100">
@@ -67,15 +67,14 @@
         </li>
 
         <li class="hover:bg-gray-100">
-            <a href="{{ route('app-settings.create') }}"
+            <Link href="{{ route('app-settings.create') }}"
                 class="h-16 px-6 flex flex justify-center items-center w-full
 					focus:text-orange-500"
                 title="App Settings">
-                <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="3"></circle>
-                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1
+            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1
                         0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0
                         0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2
                         2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0
@@ -90,8 +89,8 @@
                         2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0
                         0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65
                         1.65 0 0 0-1.51 1z"></path>
-                </svg>
-            </a>
+            </svg>
+            </Link>
         </li>
 
         <li class="hover:bg-gray-100">

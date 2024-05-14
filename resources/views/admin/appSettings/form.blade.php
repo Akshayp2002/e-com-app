@@ -5,7 +5,7 @@
         </h2>
     </x-slot>
 
-    <div class="py-12 w-full overflow-auto" style="height: 80vh">
+    <div v-SpladePreserveScroll:sidebar class="py-12 w-full overflow-auto" style="height: 80vh">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="overflow-hidden">
                 <div class="container w-full flex flex-wrap mx-auto px-2 ">
