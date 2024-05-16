@@ -20,7 +20,7 @@ return new class extends Migration
             $table->float('price')->nullable();
             $table->foreignId('product_categories_id')->nullable()->constrained('product_categories')->onDelete('cascade');
             $table->foreignId('product_inventories_id')->nullable()->constrained('product_inventories')->onDelete('cascade');
-            $table->foreignId('product_discounts')->nullable()->constrained('product_discounts')->onDelete('cascade');
+            $table->foreignId('product_discounts_id')->nullable()->constrained('product_discounts')->onDelete('cascade');
             $table->timestamps();
         });
     }
