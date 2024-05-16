@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\ProductCategory;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -12,7 +13,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.products.index');
     }
 
     /**
@@ -20,7 +21,10 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        $product = null;
+        $category = ProductCategory::pluck('name', 'id');
+        $brands = Brands::pluck('name', 'id');
+        return view('admin.products.form',compact('product', 'category'));
     }
 
     /**
@@ -28,7 +32,7 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd($request->all());
     }
 
     /**
