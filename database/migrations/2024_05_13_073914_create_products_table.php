@@ -19,6 +19,10 @@ return new class extends Migration
             $table->string('sku')->nullable();
             $table->string('images')->nullable();
             $table->float('price')->nullable();
+            $table->string('tags')->nullable();
+            $table->float('rating')->default('0.0');
+            $table->foreignId('category_id')->constrained('categories')->onDelete('cascade');
+            $table->foreignId('manufacturer_id')->nullable()->constrained('manufacturer')->onDelete('cascade');
             $table->timestamps();
         });
     }
