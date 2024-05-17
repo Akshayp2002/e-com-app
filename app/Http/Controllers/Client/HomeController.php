@@ -1,23 +1,23 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Client;
 
 use App\Http\Controllers\Controller;
-use App\Models\Manufacturer;
-use App\Models\ProductCategory;
-use App\Tables\ProductTable;
+use App\Models\BgContent;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
-class ProductController extends Controller
+class HomeController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('admin.products.index', [
-            'products' => ProductTable::class,
-        ]);
+        $slider = BgContent::first();
+        $products = Product::get();
+        $popular = Product::limit(4)->get();
+        return view('client.index',\compact('products', 'popular', 'slider'));
     }
 
     /**
@@ -25,10 +25,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        $product = null;
-        $category = ProductCategory::pluck('name', 'id');
-        $manufacturer = Manufacturer::pluck('name', 'id');
-        return view('admin.products.form',compact('product', 'category', 'manufacturer'));
+        //
     }
 
     /**
@@ -36,7 +33,7 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->all());
+        //
     }
 
     /**

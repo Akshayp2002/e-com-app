@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('description')->nullable();
             $table->integer('discount_percent')->nullable();
             $table->integer('discount_price')->nullable();
-            $table->tinyInteger('status')->default(0)->comment('0-Active , 1-Inactive');
+            $table->tinyInteger('suggetion_id')->default(0)->comment('0-Normal , 1-New-Arrival', '2-Populler', '2-Populer','3-Trending','4-sponsered');
             $table->foreignId('product_id')->constrained('products')->onDelete('cascade');
             $table->timestamps();
         });

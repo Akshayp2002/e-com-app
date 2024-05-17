@@ -15,12 +15,12 @@ return new class extends Migration
             $table->id();
             $table->uuid('uuid')->nullable();
             $table->string('name');
-            $table->string('Logo');
+            $table->string('logo');
             $table->string('description')->nullable();
             $table->string('website')->nullable();
-            $table->float('email')->nullable();
-            $table->float('phone')->nullable();
-            $table->float('policy')->nullable();
+            $table->string('email')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('policy')->nullable();
             $table->tinyInteger('status')->default(0)->comment('1-Active, 0-InActive');
             $table->timestamps();
         });

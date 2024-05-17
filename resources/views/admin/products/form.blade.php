@@ -15,23 +15,29 @@
                     <x-splade-file data-required name="image[]" label="Image" type="file" multiple />
                 </div>
 
+                <!-- Image and URL -->
+                <div class="input_one">
+                    <x-splade-file data-required name="cover_image" label="Cover Image" />
+                </div>
+
                 <!-- Color and Size -->
                 <div class="input_one">
                     <x-splade-input type="color" name="color" label="Color" />
                 </div>
                 <div class="input_one">
-                    <x-splade-input name="width" label="Width" />
+                    <x-splade-input name="width" type="number" label="Width" />
                 </div>
                 <div class="input_one">
-                    <x-splade-input name="height" label="Height" />
+                    <x-splade-input name="height" type="number" label="Height" />
                 </div>
                 <div class="input_one">
-                    <x-splade-input name="weight" label="Weight" />
+                    <x-splade-input name="weight" type="number" label="Weight" />
                 </div>
 
-                <!-- Brand and Tags -->
+                <!-- Manufacturer and Tags -->
                 <div class="input_one">
-                    <x-splade-input name="brand" label="Brand Name" />
+                    <x-splade-select data-required name="manufacturer_id" label="Manufacturer" :options="$manufacturer"
+                        choices />
                 </div>
                 <div class="input_one">
                     <x-splade-input name="tags" label="Tags" />

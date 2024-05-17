@@ -14,7 +14,7 @@
         <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
             <div class="text-gray-900 dark:text-gray-100">
                 <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-                    {{-- <x-splade-table :for="$categories" /> --}}
+                    <x-splade-table :for="$products" />
                 </div>
             </div>
         </div>

@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\BgContentController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\CollectionController;
 use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Client\HomeController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -33,8 +34,10 @@ Route::middleware('splade')->group(function () {
     Route::spladeUploads();
 
     Route::get('/', function () {
-        return view('client.index');
+        return to_route('home');
     });
+    Route::get('/home', [HomeController::class, 'index'])->name('home');
+
     Route::view('/product-details', 'client.product-detail')->name('product-details');
     Route::view('/shop-grid', 'client.shop-grid')->name('shop-grid');
     Route::view('/checkout', 'client.checkout')->name('checkout');

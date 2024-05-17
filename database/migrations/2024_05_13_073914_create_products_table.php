@@ -17,11 +17,14 @@ return new class extends Migration
             $table->string('name');
             $table->string('description')->nullable();
             $table->string('sku')->nullable();
+            $table->string('cover_images')->nullable();
             $table->string('images')->nullable();
             $table->float('price')->nullable();
+            $table->float('offer_price')->nullable();
             $table->string('tags')->nullable();
             $table->float('rating')->default('0.0');
-            $table->foreignId('category_id')->constrained('categories')->onDelete('cascade');
+            $table->tinyInteger('status')->default(0)->comment('0-Active , 1-Inactive');
+            $table->foreignId('category_id')->constrained('product_categories')->onDelete('cascade');
             $table->foreignId('manufacturer_id')->nullable()->constrained('manufacturer')->onDelete('cascade');
             $table->timestamps();
         });
