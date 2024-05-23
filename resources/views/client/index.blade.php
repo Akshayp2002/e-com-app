@@ -30,7 +30,7 @@
                 <p class="text-slate-400 max-w-xl mx-auto">Shop the latest products from the most popular collections</p>
             </div><!--end grid-->
 
-            <div class="grid lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-3 grid-cols-2 pt-6 gap-6">
+            <div class="flex lg:grid-cols-5 md:grid-cols-3 sm:grid-cols-3 grid-cols-2 pt-6 gap-6">
                 <a href="" class="text-center hover:text-orange-500">
                     <img src="{{ asset('../resources/assets/images/categories/800x800.png') }}"
                         class="rounded-full shadow dark:shadow-gray-800" alt="">
@@ -55,11 +55,11 @@
                     <span class="text-xl font-medium mt-3 block">Smart Watch</span>
                 </a>
 
-                <a href="" class="text-center hover:text-orange-500">
+                {{-- <a href="" class="text-center hover:text-orange-500">
                     <img src="{{ asset('../resources/assets/images/categories/800x800.png') }}"
                         class="rounded-full shadow dark:shadow-gray-800" alt="">
                     <span class="text-xl font-medium mt-3 block">Sunglasses</span>
-                </a>
+                </a> --}}
             </div><!--end grid-->
         </div><!--end container-->
 
