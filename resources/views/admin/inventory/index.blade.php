@@ -6,11 +6,11 @@
             </h2>
             <Link modal href="{{ route('products.create') }}"
                 class="shadow bg-yellow-700 hover:bg-yellow-500 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded">
-            Create
+            Create Inventory
             </Link>
         </div>
     </x-slot>
-    <div class="py-12 max-w-7xl mx-auto sm:px-6 lg:px-8">
+    <div class="py-12 max-w-7xl mx-auto sm:px-6 lg:px-8 h-[80vh] overflow-auto">
         <x-splade-form :default="$product" :action="isset($product->id) ? route('products.update', $product->uuid) : route('products.store')" :method="isset($product->id) ? 'PUT' : 'POST'">
             <div class="masters_modal m-3 p-4">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -33,7 +33,7 @@
                     <div class="input_one">
                         <x-splade-select data-required name="category_id" label="Category" :options="$category" choices />
                     </div>
-                    <div class="input_one">
+                    <div class="input_one mt-8">
                         <div class="flex justify-end gap-2">
                             <Link
                                 class="shadow bg-yellow-700 hover:bg-yellow-500 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded">
@@ -46,14 +46,14 @@
                 </div>
             </div>
         </x-splade-form>
-    </div>
+        <div class="mt-14">
+            <x-splade-table :for="$inventory">
+                @cell('actions', $inventory)
+                    <x-index.actions :edit="route('inventory.edit', $inventory->uuid)" :delete="route('inventory.destroy', $inventory->uuid)" />
+                @endcell
+            </x-splade-table>
+        </div>
 
-    <div class="py-6 max-w-7xl mx-auto sm:px-6 lg:px-8">
-        <x-splade-table :for="$inventory">
-            @cell('actions', $inventory)
-                <x-index.actions :edit="route('inventory.edit', $inventory->uuid)" :delete="route('inventory.destroy', $inventory->uuid)" />
-            @endcell
-        </x-splade-table>
     </div>
 
 </x-app-layout>
