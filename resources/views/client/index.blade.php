@@ -2,13 +2,14 @@
 @section('client')
     <!-- Start Hero -->
     <section
-        class="relative md:flex table w-full items-center md:h-screen py-36 bg-emerald-500/5 bg-[url('../../assets/images/hero/bg3.png')] md:bg-top bg-center bg-no-repeat bg-cover" >
+        class="relative md:flex table w-full items-center md:h-screen py-36 bg-emerald-500/5 bg-[url('../../assets/images/hero/bg3.png')] md:bg-top bg-center bg-no-repeat bg-cover">
         <div class="container relative">
             <div class="grid grid-cols-1 justify-center">
                 <div class="text-center">
                     <span class="uppercase font-semibold text-lg">New Collection</span>
-                    <h4 class="md:text-6xl text-4xl md:leading-normal leading-normal font-bold my-3">{{ $slider->title ?? 'The Gift Suite'}}</h4>
-                    <p class="text-lg">{{ $slider->sub_title ?? 'Our latest collection of essential basics.'}}.</p>
+                    <h4 class="md:text-6xl text-4xl md:leading-normal leading-normal font-bold my-3">
+                        {{ $slider->title ?? 'The Gift Suite' }}</h4>
+                    <p class="text-lg">{{ $slider->sub_title ?? 'Our latest collection of essential basics.' }}.</p>
 
                     <div class="mt-6">
                         <Link href="{{ route('shop-grid') }}"
@@ -102,9 +103,15 @@
                                                 </path>
                                             </svg></a></li>
                                     <li class="mt-1">
-                                        <Link href="{{ route('product-details') }}"
+                                        <Link href="{{ route('c-products.show',$product->uuid) }}"
                                             class="size-10 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-center rounded-full bg-white text-slate-900 hover:bg-slate-900 hover:text-white shadow">
-                                        <i data-feather="eye" class="size-4"></i></Link>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="feather feather-eye size-4">
+                                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                            <circle cx="12" cy="12" r="3"></circle>
+                                        </svg></Link>
                                     </li>
                                     <li class="mt-1"><a href=""
                                             class="size-10 inline-flex items-center justify-center tracking-wide align-middle duration-500 text-center rounded-full bg-white text-slate-900 hover:bg-slate-900 hover:text-white shadow"><svg
@@ -127,7 +134,8 @@
                                 <a href="product-detail-one.html"
                                     class="hover:text-orange-500 text-lg font-medium">{{ $product->name ?? 'product name' }}</a>
                                 <div class="flex justify-between items-center mt-1">
-                                    <p>{{ $product->offer_price }} <del class="text-slate-400">{{ $product->price }}</del>
+                                    <p>{{ $product->offer_price }} <del
+                                            class="text-slate-400">{{ $product->price }}</del>
                                     </p>
                                     <ul class="font-medium text-amber-400 list-none">
                                         <li class="inline"><i class="mdi mdi-star"></i></li>

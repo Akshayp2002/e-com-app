@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\BgContentController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\CollectionController;
 use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Client\CProduct;
 use App\Http\Controllers\Client\HomeController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -55,6 +56,11 @@ Route::middleware('splade')->group(function () {
         'categories'   => CategoryController::class,
         'products'     => ProductController::class,
     ]);
+
+    Route::resources([
+        'c-products' => CProduct::class,
+    ]);
+
 
 
     Route::middleware('auth')->group(function () {

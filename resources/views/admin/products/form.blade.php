@@ -9,17 +9,6 @@
                 <div class="input_one">
                     <x-splade-input data-required name="description" label="Description" />
                 </div>
-
-                <!-- Image and URL -->
-                <div class="input_one">
-                    <x-splade-file data-required name="image[]" label="Image" type="file" multiple />
-                </div>
-
-                <!-- Image and URL -->
-                <div class="input_one">
-                    <x-splade-file data-required name="cover_image" label="Cover Image" />
-                </div>
-
                 <!-- Color and Size -->
                 <div class="input_one">
                     <x-splade-input type="color" name="color" label="Color" />
@@ -54,6 +43,29 @@
                 <!-- Offer Price and Rating -->
                 <div class="input_one">
                     <x-splade-input name="offer_price" label="Offer Price" type="number" step="0.01" />
+                </div>
+                <div class="input_one">
+                    <x-splade-input name="quantity" label="Quantity" type="number" />
+                </div>
+                <div class="input_one">
+                    <x-splade-select label="Size" name="size">
+                        <option value="xs">Extra Small</option>
+                        <option value="s">Small</option>
+                        <option value="m">Medium</option>
+                        <option value="l">Large</option>
+                        <option value="xl">Extra Large</option>
+                        <option value="xxl">Double Extra Large</option>
+                    </x-splade-select>
+
+                </div>
+                <!-- Image and URL -->
+                <div class="input_one flex gap-2">
+                    <x-splade-file data-required name="cover_image" label="Cover Image" />
+                    <x-splade-file data-required name="images[]" label="Images" multiple />
+                </div>
+
+                <!-- Image and URL -->
+                <div class="input_one">
                 </div>
             </div>
         </div>

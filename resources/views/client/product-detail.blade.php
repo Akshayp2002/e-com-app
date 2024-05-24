@@ -4,7 +4,7 @@
     <section class="relative table w-full py-20 lg:py-24 md:pt-28 bg-gray-50 dark:bg-slate-800">
         <div class="container relative">
             <div class="grid grid-cols-1 mt-14">
-                <h3 class="text-3xl leading-normal font-semibold">Mens Brown Jecket</h3>
+                <h3 class="text-3xl leading-normal font-semibold">{{ $prodcuct_details->name ?? ".."}}</h3>
             </div><!--end grid-->
 
             <div class="relative mt-3">
@@ -19,8 +19,7 @@
                     </li>
                     <li class="inline-block text-base text-slate-950 dark:text-white mx-0.5 ltr:rotate-0 rtl:rotate-180"><i
                             class="mdi mdi-chevron-right"></i></li>
-                    <li class="inline-block uppercase text-[13px] font-bold text-orange-500" aria-current="page">Mens Brown
-                        Jecket</li>
+                    <li class="inline-block uppercase text-[13px] font-bold text-orange-500" aria-current="page">{{ $prodcuct_details->name ?? ".."}}</li>
                 </ul>
             </div>
         </div><!--end container-->
@@ -86,9 +85,9 @@
                 </div><!--end content-->
 
                 <div class="">
-                    <h5 class="text-2xl font-semibold">Mens Brown Jecket</h5>
+                    <h5 class="text-2xl font-semibold">{{ $prodcuct_details->name ?? ".."}}</h5>
                     <div class="mt-2">
-                        <span class="text-slate-400 font-semibold me-1">$16USD <del class="text-red-600">$21USD</del></span>
+                        <span class="text-slate-400 font-semibold me-1">${{ $prodcuct_details->offer_price ?? ".."}} <del class="text-red-600">${{ $prodcuct_details->price ?? ".."}}</del></span>
 
                         <ul class="list-none inline-block text-orange-400">
                             <li class="inline"><i class="mdi mdi-star text-lg"></i></li>
@@ -96,15 +95,13 @@
                             <li class="inline"><i class="mdi mdi-star text-lg"></i></li>
                             <li class="inline"><i class="mdi mdi-star text-lg"></i></li>
                             <li class="inline"><i class="mdi mdi-star text-lg"></i></li>
-                            <li class="inline text-slate-400 font-semibold">4.8 (45)</li>
+                            <li class="inline text-slate-400 font-semibold">{{ $prodcuct_details->rating ?? ".."}} (45)</li>
                         </ul>
                     </div>
 
                     <div class="mt-4">
                         <h5 class="text-lg font-semibold">Overview :</h5>
-                        <p class="text-slate-400 mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
-                            exercitationem, unde molestiae sint quae inventore atque minima natus fugiat nihil quisquam
-                            voluptates ea omnis. Modi laborum soluta tempore unde accusantium.</p>
+                        <p class="text-slate-400 mt-2">{{ $prodcuct_details->description ?? ".."}}</p>
 
                         <ul class="list-none text-slate-400 mt-4">
                             <li class="mb-1 flex"><i class="mdi mdi-check-circle-outline text-orange-500 text-xl me-2"></i>
@@ -203,13 +200,7 @@
                 <div class="lg:col-span-9 md:col-span-7">
                     <div id="myTabContent" class="p-6 bg-white dark:bg-slate-900 shadow dark:shadow-gray-800 rounded-md">
                         <div class="" id="description" role="tabpanel" aria-labelledby="profile-tab">
-                            <p class="text-slate-400">Due to its widespread use as filler text for layouts, non-readability
-                                is of great importance: human perception is tuned to recognize certain patterns and
-                                repetitions in texts. If the distribution of letters and 'words' is random, the reader will
-                                not be distracted from making a neutral judgement on the visual impact and readability of
-                                the typefaces (typography), or the distribution of text on the page (layout or type area).
-                                For this reason, dummy text usually consists of a more or less random series of words or
-                                syllables.</p>
+                            <p class="text-slate-400">{{ $prodcuct_details->description ?? ".."}}</p>
                         </div>
 
                         <div class="hidden" id="addinfo" role="tabpanel" aria-labelledby="addinfo-tab">
@@ -235,72 +226,6 @@
 
                         <div class="hidden" id="review" role="tabpanel" aria-labelledby="review-tab">
                             <div>
-                                <div class="flex items-center justify-between">
-                                    <div class="flex items-center">
-                                        <img src="{{ asset('../resources/assets/images/client/400x400.png') }}"
-                                            class="h-11 w-11 rounded-full shadow" alt="">
-
-                                        <div class="ms-3 flex-1">
-                                            <a href=""
-                                                class="text-lg font-semibold hover:text-orange-500 duration-500">Calvin
-                                                Carlo</a>
-                                            <p class="text-sm text-slate-400">6th May 2022 at 01:25 pm</p>
-                                        </div>
-                                    </div>
-
-                                    <a href="" class="text-slate-400 hover:text-orange-500 duration-500 ms-5"><i
-                                            class="mdi mdi-reply"></i> Reply</a>
-                                </div>
-                                <div class="p-4 bg-gray-50 dark:bg-slate-800 rounded-md shadow dark:shadow-gray-800 mt-6">
-                                    <ul class="list-none inline-block text-orange-400">
-                                        <li class="inline"><i class="mdi mdi-star text-lg"></i></li>
-                                        <li class="inline"><i class="mdi mdi-star text-lg"></i></li>
-                                        <li class="inline"><i class="mdi mdi-star text-lg"></i></li>
-                                        <li class="inline"><i class="mdi mdi-star text-lg"></i></li>
-                                        <li class="inline"><i class="mdi mdi-star text-lg"></i></li>
-                                        <li class="inline text-slate-400 font-semibold">5.0</li>
-                                    </ul>
-
-                                    <p class="text-slate-400 italic">" There are many variations of passages of Lorem Ipsum
-                                        available, but the majority have suffered alteration in some form, by injected
-                                        humour "</p>
-                                </div>
-                            </div>
-
-                            <div class="mt-8">
-                                <div class="flex items-center justify-between">
-                                    <div class="flex items-center">
-                                        <img src="{{ asset('../resources/assets/images/client/400x400.png') }}"
-                                            class="h-11 w-11 rounded-full shadow" alt="">
-
-                                        <div class="ms-3 flex-1">
-                                            <a href=""
-                                                class="text-lg font-semibold hover:text-orange-500 duration-500">Calvin
-                                                Carlo</a>
-                                            <p class="text-sm text-slate-400">6th May 2022 at 01:25 pm</p>
-                                        </div>
-                                    </div>
-
-                                    <a href="" class="text-slate-400 hover:text-orange-500 duration-500 ms-5"><i
-                                            class="mdi mdi-reply"></i> Reply</a>
-                                </div>
-                                <div class="p-4 bg-gray-50 dark:bg-slate-800 rounded-md shadow dark:shadow-gray-800 mt-6">
-                                    <ul class="list-none inline-block text-orange-400">
-                                        <li class="inline"><i class="mdi mdi-star text-lg"></i></li>
-                                        <li class="inline"><i class="mdi mdi-star text-lg"></i></li>
-                                        <li class="inline"><i class="mdi mdi-star text-lg"></i></li>
-                                        <li class="inline"><i class="mdi mdi-star text-lg"></i></li>
-                                        <li class="inline"><i class="mdi mdi-star text-lg"></i></li>
-                                        <li class="inline text-slate-400 font-semibold">5.0</li>
-                                    </ul>
-
-                                    <p class="text-slate-400 italic">" There are many variations of passages of Lorem Ipsum
-                                        available, but the majority have suffered alteration in some form, by injected
-                                        humour "</p>
-                                </div>
-                            </div>
-
-                            <div class="mt-8">
                                 <div class="flex items-center justify-between">
                                     <div class="flex items-center">
                                         <img src="{{ asset('../resources/assets/images/client/400x400.png') }}"

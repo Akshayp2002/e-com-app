@@ -5,15 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ProductInventory extends Model
+class ProductComments extends Model
 {
+    
     use HasFactory;
     protected $fillable = [
-        'quantity',
-        'product_id',
+        'uuid',
+        'review',
+        'user_id',
     ];
-    public function product()
-    {
-        return $this->belongsTo(Product::class);
-    }
 }

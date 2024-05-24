@@ -53,6 +53,9 @@ class ProductTable extends AbstractTable
             ->column('price', sortable: true)
             ->column('offer_price', sortable: true)
             ->column('rating', sortable: true)
-            ->column('sku', sortable: true);
+            ->column('manufacturer.name', label: 'Manufacturer', sortable: true)
+            ->column('inventory.quantity', label: 'Quantity', sortable: true)
+            ->column('actions', sortable: true)
+            ->paginate(10);
     }
 }

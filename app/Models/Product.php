@@ -25,4 +25,17 @@ class Product extends Model
         'category_id',
         'manufacturer_id',
     ];
+
+    public function manufacturer()
+    {
+        return $this->belongsTo(Manufacturer::class);
+    }
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+    public function inventory()
+    {
+        return $this->hasOne(ProductInventory::class);
+    }
 }
