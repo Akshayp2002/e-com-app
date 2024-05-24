@@ -26,7 +26,7 @@ class ProductFactory extends Factory
             'name' => $this->faker->sentence,
             'description' => $this->faker->paragraph,
             'sku' => $this->faker->uuid,
-            'cover_images' => 'https://loremflickr.com/500/650',
+            'cover_image' => 'https://loremflickr.com/500/650',
             'images' => $this->faker->imageUrl(),
             'price' => $this->faker->randomFloat(2, 10, 100),
             'offer_price' => $this->faker->randomFloat(2, 5, 50),

@@ -2,12 +2,13 @@
 
 namespace App\Tables;
 
-use App\Models\Product;
+use App\Models\ProductInventory;
+use App\Models\ProductSku;
 use Illuminate\Http\Request;
 use ProtoneMedia\Splade\AbstractTable;
 use ProtoneMedia\Splade\SpladeTable;
 
-class ProductTable extends AbstractTable
+class InventoryTable extends AbstractTable
 {
     /**
      * Create a new instance.
@@ -36,7 +37,7 @@ class ProductTable extends AbstractTable
      */
     public function for()
     {
-        return Product::query();
+        return ProductSku::query();
     }
 
     /**
@@ -49,13 +50,12 @@ class ProductTable extends AbstractTable
     {
         $table
             ->withGlobalSearch(columns: ['name', 'price', 'offer_price', 'rating', 'sku'])
-            ->column('name', sortable: true)
+            ->column('product.name', sortable: true)
             ->column('price', sortable: true)
             ->column('offer_price', sortable: true)
-            ->column('rating', sortable: true)
-            ->column('manufacturer.name', label: 'Manufacturer', sortable: true)
+            ->column('product.manufacturer.name', label: 'Manufacturer', sortable: true)
+            ->column('quantity', label: 'Quantity', sortable: true)
             ->column('actions', sortable: true)
-            ->rowLink(fn (Product $product) => route('products.edit', $product->uuid))
             ->paginate(10);
     }
 }

@@ -3,14 +3,17 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Admin\ProductRequest;
 use App\Models\Manufacturer;
 use App\Models\Product;
 use App\Models\ProductCategory;
 use App\Models\ProductDetails;
 use App\Models\ProductInventory;
+use App\Tables\InventoryTable;
 use App\Tables\ProductTable;
 use Illuminate\Http\Request;
 use ProtoneMedia\Splade\Facades\Toast;
+use Illuminate\Support\Str;
 
 class ProductController extends Controller
 {
@@ -40,31 +43,39 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+        // // Handle file uploads for cover_image
+        // $coverImagePath = $request->hasFile('cover_image')
+        //     ? $request->file('cover_image')->store('public/products')
+        //     : null;
+        // // Handle file uploads for image
+        // $imagePaths = [];
+        // if ($request->hasFile('images')) {
+        //     foreach ($request->file('images') as $image) {
+        //         $imagePaths[] = $image->store('public/products');
+        //     }
+        // }
+
         $product = Product::create([
             "uuid"            => Str::uuid(),
             "name"            => $request->name,
             "description"     => $request->description,
-            "color"           => $request->color,
-            "width"           => $request->width,
-            "height"          => $request->height,
-            "weight"          => $request->weight,
             "manufacturer_id" => $request->manufacturer_id,
             "tags"            => $request->tags,
             "category_id"     => $request->category_id,
-            "price"           => $request->price,
-            "offer_price"     => $request->offer_price,
-            "cover_image"     => $request->cover_image,
-            "image"           => $request->image,
         ]);
-        ProductDetails::create([
-            "color"      => $request->color,
-            "size"       => $request->size,
-            "product_id" => $product->id,
-        ]);
-        ProductInventory::create([
-            'quantity'   => $request->quantity,
-            "product_id" => $product->id,
-        ]);
+        // ProductDetails::create([
+        //     "uuid"       => Str::uuid(),
+        //     "color"      => $request->color,
+        //     "size"       => $request->size,
+        //     "width"      => $request->width,
+        //     "height"     => $request->height,
+        //     "weight"     => $request->weight,
+        //     "product_id" => $product->id,
+        // ]);
+        // ProductInventory::create([
+        //     'quantity'   => $request->quantity,
+        //     "product_id" => $product->id,
+        // ]);
         Toast::success('Product Created Successfully');
         return to_route('products.index');
     }
@@ -82,22 +93,76 @@ class ProductController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $product = Product::where('uuid', $id)->first();
+        
+        $category     = ProductCategory::pluck('name', 'id');
+        $manufacturer = Manufacturer::pluck('name', 'id');
+
+        $inventory = new InventoryTable();
+        return view('admin.inventory.index', compact('product', 'category', 'manufacturer', 'inventory'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(ProductRequest $request, $uuid)
     {
-        //
+        $product = Product::where('uuid', $uuid)->first();
+        // Handle file uploads for cover_image
+        $coverImagePath = null;
+        if ($request->hasFile('cover_image')) {
+            $coverImagePath = $request->file('cover_image')->store('products', 'public');
+        }
+
+        // Handle file uploads for image
+        $imagePaths = [];
+        if ($request->hasFile('images')) {
+            foreach ($request->file('images') as $image) {
+                $imagePaths[] = $image->store('public/products');
+            }
+        }
+
+        // Update the product
+        $product->update([
+            "name"            => $request->name,
+            "description"     => $request->description,
+            "color"           => $request->color,
+            "manufacturer_id" => $request->manufacturer_id,
+            "tags"            => $request->tags,
+            "category_id"     => $request->category_id,
+            "price"           => $request->price,
+            "offer_price"     => $request->offer_price,
+            'cover_image'     => $coverImagePath,
+            'images'          => json_encode($imagePaths, JSON_UNESCAPED_SLASHES),
+        ]);
+
+        // Update or create ProductDetails
+        $product->productDetails()->updateOrCreate(
+            ['product_id' => $product->id],
+            [
+                "color"  => $request->color,
+                "size"   => $request->size,
+                "width"  => $request->width,
+                "height" => $request->height,
+                "weight" => $request->weight,
+            ]
+        );
+
+        // Update or create ProductInventory
+        $product->inventory()->updateOrCreate(
+            ['product_id' => $product->id],
+            ['quantity' => $request->quantity]
+        );
+
+        Toast::success('Product Updated Successfully');
+        return to_route('products.index');
     }
+
 
     /**
      * Remove the specified resource from storage.
      */
     public function destroy(string $id)
     {
-        //
     }
 }

@@ -12,16 +12,12 @@ class Product extends Model
     protected $table = 'products';
 
     protected $fillable = [
+        'uuid',
         'name',
         'description',
-        'sku',
-        'cover_images',
-        'images',
-        'price',
-        'offer_price',
-        'tags',
+        'overview',
         'rating',
-        'suggetion_id',
+        'status',
         'category_id',
         'manufacturer_id',
     ];
@@ -33,9 +29,5 @@ class Product extends Model
     public function category()
     {
         return $this->belongsTo(Category::class);
-    }
-    public function inventory()
-    {
-        return $this->hasOne(ProductInventory::class);
     }
 }

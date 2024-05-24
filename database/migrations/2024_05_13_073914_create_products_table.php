@@ -15,13 +15,8 @@ return new class extends Migration
             $table->id();
             $table->uuid('uuid')->nullable();
             $table->string('name');
-            $table->string('description')->nullable();
-            $table->string('sku')->nullable();
-            $table->string('cover_images')->nullable();
-            $table->string('images')->nullable();
-            $table->float('price')->nullable();
-            $table->float('offer_price')->nullable();
-            $table->string('tags')->nullable();
+            $table->string('overview')->nullable();
+            $table->longText('description')->nullable();
             $table->float('rating')->default('0.0');
             $table->tinyInteger('status')->default(0)->comment('0-Active , 1-Inactive');
             $table->foreignId('category_id')->constrained('product_categories')->onDelete('cascade');

@@ -11,10 +11,10 @@
         </div>
     </x-slot>
     <div class="py-12 max-w-7xl mx-auto sm:px-6 lg:px-8">
-        <x-splade-table :for="$products">
-            @cell('actions', $products)
-                <x-index.actions :edit="route('products.edit', $products->id)" :delete="route('products.destroy', $products->id)" />
-            @endcell
-        </x-splade-table>
+        <x-splade-table :for="$products"/>
+            {{-- @cell('actions', $products)
+                <x-index.actions :edit="route('products.edit', $products->uuid)" :delete="route('products.destroy', $products->uuid)" />
+            @endcell --}}
+        {{-- </x-splade-table> --}}
     </div>
 </x-app-layout>

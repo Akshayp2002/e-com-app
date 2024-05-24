@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\AppSettingsController;
 use App\Http\Controllers\Admin\BgContentController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\CollectionController;
+use App\Http\Controllers\Admin\InventoryController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Client\CProduct;
 use App\Http\Controllers\Client\HomeController;
@@ -55,6 +56,7 @@ Route::middleware('splade')->group(function () {
         'collection'   => CollectionController::class,
         'categories'   => CategoryController::class,
         'products'     => ProductController::class,
+        'inventory'    => InventoryController::class,
     ]);
 
     Route::resources([
