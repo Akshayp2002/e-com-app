@@ -1,5 +1,5 @@
 <x-splade-modal max-width="5xl">
-    <x-splade-form :default="$inventory" :action="isset($inventory->id) ? route('inventory.update', $inventory->uuid) : route('inventory.store')" :method="isset($inventory->id) ? 'PUT' : 'POST'">
+    <x-splade-form :default="['inventory' => $inventory, 'uuid'=> $uuid]" :action="isset($inventory->id) ? route('inventory.update', $inventory->uuid) : route('inventory.store')" :method="isset($inventory->id) ? 'PUT' : 'POST'">
         <div class="masters_modal m-3 p-4">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <!-- Name and Description -->

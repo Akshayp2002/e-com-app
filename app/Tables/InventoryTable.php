@@ -49,12 +49,13 @@ class InventoryTable extends AbstractTable
     public function configure(SpladeTable $table)
     {
         $table
-            ->withGlobalSearch(columns: ['name', 'price', 'offer_price', 'rating', 'sku'])
-            ->column('product.name', sortable: true)
-            ->column('price', sortable: true)
-            ->column('offer_price', sortable: true)
-            ->column('product.manufacturer.name', label: 'Manufacturer', sortable: true)
+            ->withGlobalSearch(columns: ['product_sku', 'price', 'offer_price', 'size', 'quantity'])
+            ->column('product_sku', sortable: true)
+            ->column('size', sortable: true)
+            ->column('color', sortable: true)
             ->column('quantity', label: 'Quantity', sortable: true)
+            ->column('price', label: 'Price', sortable: true)
+            ->column('offer_price', label: 'Offer Price', sortable: true)
             ->column('actions', sortable: true)
             ->paginate(10);
     }

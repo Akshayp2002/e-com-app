@@ -24,21 +24,10 @@ class ProductRequest extends FormRequest
         return [
             'name'            => 'required|string|max:255',
             'description'     => 'nullable|string',
-            'color'           => 'required|string|max:50',
-            'width'           => 'nullable|numeric',
-            'height'          => 'nullable|numeric',
-            'weight'          => 'nullable|numeric',
             'manufacturer_id' => 'required|exists:manufacturer,id',
             'tags'            => 'nullable',
             'tags.*'          => 'string',
             'category_id'     => 'required|exists:product_categories,id',
-            'price'           => 'required|numeric|min:0',
-            'offer_price'     => 'nullable|numeric|min:0|lt:price',
-            'cover_image'     => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'images'           => 'nullable|array',
-            'images.*'         => 'image|mimes:jpeg,png,jpg,gif|max:2048',
-            'size'            => 'nullable|string|max:50',
-            'quantity'        => 'required|integer|min:0',
         ];
     }
 

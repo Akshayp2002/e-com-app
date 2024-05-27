@@ -58,6 +58,9 @@ Route::middleware('splade')->group(function () {
         'products'     => ProductController::class,
         'inventory'    => InventoryController::class,
     ]);
+    Route::get('inventory/create/{uuid}', [InventoryController::class, 'create'])->name('inventory.create');
+
+
 
     Route::resources([
         'c-products' => CProduct::class,

@@ -55,7 +55,7 @@ class ProductController extends Controller
         //     }
         // }
 
-        $product = Product::create([
+        Product::create([
             "uuid"            => Str::uuid(),
             "name"            => $request->name,
             "description"     => $request->description,
@@ -63,19 +63,6 @@ class ProductController extends Controller
             "tags"            => $request->tags,
             "category_id"     => $request->category_id,
         ]);
-        // ProductDetails::create([
-        //     "uuid"       => Str::uuid(),
-        //     "color"      => $request->color,
-        //     "size"       => $request->size,
-        //     "width"      => $request->width,
-        //     "height"     => $request->height,
-        //     "weight"     => $request->weight,
-        //     "product_id" => $product->id,
-        // ]);
-        // ProductInventory::create([
-        //     'quantity'   => $request->quantity,
-        //     "product_id" => $product->id,
-        // ]);
         Toast::success('Product Created Successfully');
         return to_route('products.index');
     }
@@ -109,55 +96,30 @@ class ProductController extends Controller
     {
         $product = Product::where('uuid', $uuid)->first();
         // Handle file uploads for cover_image
-        $coverImagePath = null;
-        if ($request->hasFile('cover_image')) {
-            $coverImagePath = $request->file('cover_image')->store('products', 'public');
-        }
+        // $coverImagePath = null;
+        // if ($request->hasFile('cover_image')) {
+        //     $coverImagePath = $request->file('cover_image')->store('products', 'public');
+        // }
 
-        // Handle file uploads for image
-        $imagePaths = [];
-        if ($request->hasFile('images')) {
-            foreach ($request->file('images') as $image) {
-                $imagePaths[] = $image->store('public/products');
-            }
-        }
+        // // Handle file uploads for image
+        // $imagePaths = [];
+        // if ($request->hasFile('images')) {
+        //     foreach ($request->file('images') as $image) {
+        //         $imagePaths[] = $image->store('public/products');
+        //     }
+        // }
 
         // Update the product
         $product->update([
             "name"            => $request->name,
             "description"     => $request->description,
-            "color"           => $request->color,
             "manufacturer_id" => $request->manufacturer_id,
             "tags"            => $request->tags,
             "category_id"     => $request->category_id,
-            "price"           => $request->price,
-            "offer_price"     => $request->offer_price,
-            'cover_image'     => $coverImagePath,
-            'images'          => json_encode($imagePaths, JSON_UNESCAPED_SLASHES),
         ]);
-
-        // Update or create ProductDetails
-        $product->productDetails()->updateOrCreate(
-            ['product_id' => $product->id],
-            [
-                "color"  => $request->color,
-                "size"   => $request->size,
-                "width"  => $request->width,
-                "height" => $request->height,
-                "weight" => $request->weight,
-            ]
-        );
-
-        // Update or create ProductInventory
-        $product->inventory()->updateOrCreate(
-            ['product_id' => $product->id],
-            ['quantity' => $request->quantity]
-        );
-
         Toast::success('Product Updated Successfully');
-        return to_route('products.index');
+        return \redirect()->back();
     }
-
 
     /**
      * Remove the specified resource from storage.

@@ -2,12 +2,14 @@
 
 namespace App\Models;
 
+use BinaryCats\Sku\Concerns\SkuOptions;
+use BinaryCats\Sku\HasSku;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class ProductSku extends Model
 {
-    use HasFactory;
+    use HasFactory, HasSku;
     protected $table = 'product_skus';
 
     protected $fillable = [
@@ -23,5 +25,15 @@ class ProductSku extends Model
     public function product()
     {
         return $this->belongsTo(Product::class);
+    }
+    public function skuOptions(): SkuOptions
+    {
+        return SkuOptions::make()
+            ->from(['label', 'size'])
+            ->target('product_sku')
+            ->using('_')
+            ->forceUnique(false)
+            ->generateOnCreate(true)
+            ->refreshOnUpdate(false);
     }
 }
