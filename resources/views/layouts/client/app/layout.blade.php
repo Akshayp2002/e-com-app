@@ -1,5 +1,5 @@
-@extends('layouts.client.root')
-@section('app')
+{{-- @extends('root')
+@section('app') --}}
     <!-- Loader Start -->
     <!-- <div id="preloader">
             <div id="status">
@@ -11,6 +11,8 @@
         </div> -->
     <!-- Loader End -->
     <!-- TAGLINE START-->
+    <div>
+
     <div class="tagline bg-slate-900">
         <div class="container relative">
             <div class="grid grid-cols-1">
@@ -72,5 +74,7 @@
     <a href="#" onclick="topFunction()" id="back-to-top"
         class="back-to-top fixed hidden text-lg rounded-full z-10 bottom-5 end-5 size-9 text-center bg-orange-500 text-white justify-center items-center"><i
             class="mdi mdi-arrow-up"></i></a>
+                    
+    </div>
     <!-- Back to top -->
-@endsection
+{{-- @endsection --}}
