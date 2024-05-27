@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="en" class="light scroll-smooth" dir="ltr">
 
 <head>
@@ -14,7 +14,7 @@
 
     <!-- favicon -->
     <link rel="shortcut icon" href="{{ asset('../resources/assets/images/favicon.ico') }}">
-</head>
+</head> --}}
     <!-- Fonts -->
     <!-- Add this in the <head> section of your HTML file -->
 
@@ -22,9 +22,9 @@
         
 
 {{-- <body class="dark:bg-slate-900"> --}}
-
+{{-- 
 <body>
     @yield('app')
 </body>
 
-</html>
+</html> --}}

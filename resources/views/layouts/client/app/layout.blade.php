@@ -11,7 +11,7 @@
         </div> -->
     <!-- Loader End -->
     <!-- TAGLINE START-->
-    <div>
+    <div class="layout_123">
 
     <div class="tagline bg-slate-900">
         <div class="container relative">
