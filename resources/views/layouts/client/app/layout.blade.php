@@ -1,7 +1,7 @@
 {{-- @extends('root')
 @section('app') --}}
-    <!-- Loader Start -->
-    <!-- <div id="preloader">
+<!-- Loader Start -->
+<!-- <div id="preloader">
             <div id="status">
                 <div class="spinner">
                     <div class="double-bounce1"></div>
@@ -9,9 +9,9 @@
                 </div>
             </div>
         </div> -->
-    <!-- Loader End -->
-    <!-- TAGLINE START-->
-    <div class="layout_123">
+<!-- Loader End -->
+<!-- TAGLINE START-->
+<div class="layout_123">
 
     <div class="tagline bg-slate-900">
         <div class="container relative">
@@ -25,25 +25,21 @@
     <!-- TAGLINE END-->
 
 
-    <!-- Start Navbar -->
-    <nav id="topnav" class="defaultscroll is-sticky tagline-height">
+    <!-- Start header new -->
 
-        @include('layouts.client.app.header')
 
-    </nav>
-    <!-- End Navbar -->
+    @include('layouts.client.app.header')
+
+
+    <!-- End Header new -->
 
     @yield('client')
 
-    <!-- Footer Start -->
+    <!-- Footer Start new -->
 
-    <footer class="footer bg-dark-footer relative text-gray-200 dark:text-gray-200">
+    @include('layouts.client.app.footer')
 
-        @include('layouts.client.app.footer')
-
-    </footer>
-
-    <!-- Footer End -->
+    <!-- Footer End new -->
     <!-- Switcher -->
     {{-- <div class="fixed top-1/4 -left-2 z-50">
         <span class="relative inline-block rotate-90">
@@ -74,7 +70,7 @@
     <a href="#" onclick="topFunction()" id="back-to-top"
         class="back-to-top fixed hidden text-lg rounded-full z-10 bottom-5 end-5 size-9 text-center bg-orange-500 text-white justify-center items-center"><i
             class="mdi mdi-arrow-up"></i></a>
-                    
-    </div>
-    <!-- Back to top -->
+
+</div>
+<!-- Back to top -->
 {{-- @endsection --}}
